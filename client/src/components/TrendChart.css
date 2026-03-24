@@ -1,0 +1,261 @@
+/* TrendChart Styles */
+
+.trend-chart {
+  padding: 24px;
+}
+
+.trend-chart .chart-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.trend-chart .chart-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.trend-chart .chart-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 4px 0 0;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border-radius: var(--radius-md);
+}
+
+.toggle-btn {
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggle-btn:hover {
+  color: white;
+}
+
+.toggle-btn.active {
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.chart-container {
+  margin-bottom: 24px;
+}
+
+/* Trend Tooltip */
+.trend-tooltip {
+  padding: 12px 16px !important;
+  min-width: 160px;
+}
+
+.tooltip-date {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltip-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.tooltip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.tooltip-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.tooltip-value {
+  font-weight: 600;
+  margin-left: auto;
+}
+
+/* Weekday Analysis */
+.weekday-analysis {
+  margin-bottom: 24px;
+}
+
+.weekday-chart {
+  margin-bottom: 24px;
+}
+
+.weekday-cards {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.weekday-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.weekday-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.weekday-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.weekday-avg {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.weekday-count {
+  font-size: 0.625rem;
+  color: var(--text-muted);
+}
+
+/* Trend Stats */
+.trend-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.stat-card .stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card .stat-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.stat-card .stat-detail {
+  font-size: 0.7rem;
+  color: var(--primary-color);
+  margin-top: 2px;
+}
+
+/* Daily Cards */
+.daily-cards {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.daily-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.daily-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.daily-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.daily-amounts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.daily-credit {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #22d3ee;
+}
+
+.daily-debit {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f45c43;
+}
+
+.daily-count {
+  font-size: 0.625rem;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .weekday-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .daily-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .trend-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .weekday-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .daily-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

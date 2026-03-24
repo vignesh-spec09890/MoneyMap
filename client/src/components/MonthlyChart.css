@@ -1,0 +1,173 @@
+/* MonthlyChart Styles */
+
+.monthly-chart {
+  padding: 24px;
+}
+
+.monthly-chart .chart-header {
+  margin-bottom: 24px;
+}
+
+.monthly-chart .chart-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.monthly-chart .chart-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 4px 0 0;
+}
+
+.chart-container {
+  margin-bottom: 24px;
+}
+
+/* Tooltip Styles */
+.monthly-tooltip {
+  padding: 16px !important;
+  min-width: 180px;
+}
+
+.tooltip-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 0.875rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.875rem;
+}
+
+.tooltip-row.credit span:last-child {
+  color: #22d3ee;
+}
+
+.tooltip-row.debit span:last-child {
+  color: #f45c43;
+}
+
+.tooltip-row.net span:last-child.positive {
+  color: #22d3ee;
+}
+
+.tooltip-row.net span:last-child.negative {
+  color: #f45c43;
+}
+
+.tooltip-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 8px 0;
+}
+
+.tooltip-transactions {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Monthly Summary */
+.monthly-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.month-card {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.month-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.month-name {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.month-transactions {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.month-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 0.625rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.stat-item.credit .stat-value {
+  color: #22d3ee;
+}
+
+.stat-item.debit .stat-value {
+  color: #f45c43;
+}
+
+.month-net {
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.month-net.positive {
+  background: rgba(6, 182, 212, 0.15);
+  color: #22d3ee;
+}
+
+.month-net.negative {
+  background: rgba(244, 92, 67, 0.15);
+  color: #f45c43;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .monthly-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .monthly-summary {
+    grid-template-columns: 1fr;
+  }
+}

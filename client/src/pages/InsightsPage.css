@@ -1,0 +1,385 @@
+/* InsightsPage Styles */
+
+.insights-page {
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* Header */
+.insights-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  margin: 16px;
+  border-radius: 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: white;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.header-info h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.file-name {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Main Layout */
+.insights-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 260px;
+  gap: 16px;
+  padding: 0 16px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+/* Left Sidebar - Months */
+.months-sidebar {
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.months-sidebar h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.months-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.month-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.month-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.month-item.active {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.month-count {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.month-item.active .month-count {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content */
+.insights-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Overview Section */
+.overview-section {
+  width: 100%;
+}
+
+/* Charts Section */
+.charts-section {
+  width: 100%;
+}
+
+.chart-container {
+  width: 100%;
+}
+
+.chart-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  gap: 16px;
+}
+
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chart-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  gap: 16px;
+  text-align: center;
+}
+
+.chart-error svg {
+  font-size: 48px;
+  color: #f45c43;
+}
+
+/* Right Sidebar - Insight Types */
+.insights-sidebar {
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.insights-sidebar h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.insight-types {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.insight-type-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.insight-type-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.insight-type-btn.active {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #818cf8;
+}
+
+.insight-type-btn svg {
+  font-size: 18px;
+}
+
+/* Anomalies View */
+.anomalies-view {
+  padding: 24px;
+}
+
+.anomalies-view h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #f45c43;
+}
+
+.anomaly-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.anomaly-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: rgba(244, 92, 67, 0.1);
+  border: 1px solid rgba(244, 92, 67, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.anomaly-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.anomaly-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.anomaly-recipient {
+  font-weight: 500;
+}
+
+.anomaly-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f45c43;
+}
+
+.anomaly-deviation {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.no-data {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .insights-layout {
+    grid-template-columns: 200px 1fr 240px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .insights-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .months-sidebar,
+  .insights-sidebar {
+    position: relative;
+    top: 0;
+  }
+
+  .months-sidebar {
+    order: -1;
+  }
+
+  .months-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .insight-types {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .insight-type-btn {
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .insights-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .header-actions .btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .insights-layout {
+    padding: 0 12px;
+  }
+
+  .months-sidebar,
+  .insights-sidebar {
+    padding: 16px;
+  }
+
+  .insight-type-btn {
+    padding: 12px;
+    min-width: 100px;
+  }
+}

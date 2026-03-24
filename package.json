@@ -1,0 +1,28 @@
+{
+  "name": "bank-statement-insight-generator",
+  "version": "1.0.0",
+  "description": "Smart Bank Statement Insight Generator with Glassmorphism UI",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd client && npm install",
+    "server": "cd server && node index.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [
+    "bank-statement",
+    "financial-insights",
+    "pdf-parser",
+    "expense-tracker"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "form-data": "^4.0.5",
+    "node-fetch": "^2.7.0"
+  }
+}

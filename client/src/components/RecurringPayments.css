@@ -1,0 +1,260 @@
+/* RecurringPayments Styles */
+
+.recurring-payments {
+  padding: 24px;
+}
+
+.recurring-payments .chart-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.recurring-payments .chart-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.recurring-payments .chart-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 4px 0 0;
+}
+
+.total-recurring {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 12px 20px;
+  background: rgba(99, 102, 241, 0.12);
+  border-radius: var(--radius-md);
+}
+
+.total-recurring .label {
+  font-size: 0.625rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.total-recurring .amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #818cf8;
+}
+
+/* Recurring List */
+.recurring-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recurring-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.recurring-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.recurring-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.recurring-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: var(--radius-md);
+  color: #818cf8;
+  font-size: 18px;
+}
+
+.recurring-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.recurring-name {
+  display: block;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+
+.recurring-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.frequency-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.frequency-badge.primary {
+  background: rgba(99, 102, 241, 0.2);
+  color: #818cf8;
+}
+
+.frequency-badge.success {
+  background: rgba(6, 182, 212, 0.2);
+  color: #22d3ee;
+}
+
+.frequency-badge.warning {
+  background: rgba(242, 201, 76, 0.2);
+  color: #f2c94c;
+}
+
+.frequency-badge.danger {
+  background: rgba(244, 92, 67, 0.2);
+  color: #f45c43;
+}
+
+.frequency-badge.secondary,
+.frequency-badge.muted {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+}
+
+.occurrence-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.recurring-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.avg-amount {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.total-spent {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Recurring Details */
+.recurring-details {
+  display: flex;
+  gap: 16px;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-item.next {
+  color: #f2c94c;
+}
+
+/* No Recurring */
+.no-recurring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.no-data-icon {
+  font-size: 48px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.no-recurring p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 8px;
+}
+
+.no-data-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  max-width: 300px;
+}
+
+/* Recurring Summary */
+.recurring-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.summary-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.summary-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recurring-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .recurring-main {
+    flex-wrap: wrap;
+  }
+
+  .recurring-amount {
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 8px;
+  }
+}

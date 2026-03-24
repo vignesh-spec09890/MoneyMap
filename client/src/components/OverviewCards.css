@@ -1,0 +1,162 @@
+/* OverviewCards Styles */
+
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.overview-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.overview-card.clickable {
+  cursor: pointer;
+}
+
+.overview-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  opacity: 0.8;
+}
+
+.overview-card.primary::before {
+  background: var(--primary-gradient);
+}
+
+.overview-card.success::before {
+  background: linear-gradient(135deg, #06b6d4, #22d3ee);
+}
+
+.overview-card.danger::before {
+  background: var(--danger-gradient);
+}
+
+.overview-card.warning::before {
+  background: var(--warning-gradient);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 22px;
+}
+
+.card-icon.primary {
+  background: rgba(99, 102, 241, 0.2);
+  color: #6366f1;
+}
+
+.card-icon.success {
+  background: rgba(6, 182, 212, 0.2);
+  color: #22d3ee;
+}
+
+.card-icon.danger {
+  background: rgba(244, 92, 67, 0.2);
+  color: #f45c43;
+}
+
+.card-icon.warning {
+  background: rgba(242, 201, 76, 0.2);
+  color: #f2c94c;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.card-sub {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.card-action {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  font-size: 0.625rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.overview-card.clickable:hover .card-action {
+  opacity: 1;
+}
+
+/* Skeleton Loading */
+.skeleton-card {
+  padding: 20px;
+}
+
+.skeleton-card .skeleton-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.skeleton-card .skeleton-value {
+  width: 80%;
+  height: 28px;
+  margin-bottom: 8px;
+}
+
+.skeleton-card .skeleton-label {
+  width: 60%;
+  height: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .overview-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-value {
+    font-size: 1.25rem;
+  }
+}
